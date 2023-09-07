@@ -28,6 +28,8 @@ Build Terraform workflow with Github action.
     - Create role with custom trust
     - Add 'Iam role Policy' allowing sts accume
     - Attach a policy that allow write to bucket
+    - Add Dynamo DB table write access
+    - Any other necessary resource permission.
 
 - Github
     - Create secret : AWS_BUCKET_NAME
