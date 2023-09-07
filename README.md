@@ -2,13 +2,13 @@
 Build Terraform workflow with Github action.
 
 # Goals
-- [] AWS Open ID connect for token
-- [] Tf fmt and validate
-- [] Tflint
-- [] tfsec
-- [] Protect main branch
-- [] action on pull request only
-- [] Require approval for merge
+[] AWS Open ID connect for token
+[] Tf fmt and validate
+[] Tflint
+[] tfsec
+[] Protect main branch
+[] action on pull request only
+[] Require approval for merge
 
 # Steps
 
@@ -26,16 +26,41 @@ Build Terraform workflow with Github action.
     - Get Thump print
 - Custom Role
     - Create role with custom trust
-    - add sts:AssumeRole
+    - Add 'Iam role Policy' allowing sts accume
+    - Attach a policy that allow write to bucket
 
-
-
-    1c58a3a8518e8759bf075b76b750d4f2df264fcd
-
+- Github
+    - Create secret : AWS_BUCKET_NAME
+    - Set tfstate file name AWS_BUCKER_KEY_NAME
+    - Set region : AWS_REGION
+    - Ser AWS role github action will assume : AWS_ROLE
 
 # aws role template
 
+
+```json
+// Iam role policy
+{
+    "Version": "2008-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::YOUR_ACCOUNT_NUMBER:oidc-provider/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME:*"
+                }
+            }
+        }
+    ]
+}
 ```
+
+```json
+// Policy/permission for s3 bucket write 
 {
     "Version": "2012-10-17",
     "Statement": [
