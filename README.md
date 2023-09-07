@@ -17,6 +17,10 @@ Build Terraform workflow with Github action.
     - Enable encryption
     - Enable bucker versioning
 
+## Dynamodb table for locking
+    - Create Dynamo DB talbe
+    - Partin key must be **LockID**
+
 ## IAM
 - AWS Identity provider OpenID
     - in IAM create Identity provider
@@ -28,6 +32,8 @@ Build Terraform workflow with Github action.
     - Create role with custom trust
     - Add 'Iam role Policy' allowing sts accume
     - Attach a policy that allow write to bucket
+    - Add Dynamo DB table write access
+    - Any other necessary resource permission.
 
 - Github
     - Create secret : AWS_BUCKET_NAME
