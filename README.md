@@ -12,16 +12,16 @@ Build Terraform workflow with Github action.
 
 # Steps
 
-## S3 bucket to store statefile
+### S3 bucket to store statefile
 - S3 bucket
     - Enable encryption
     - Enable bucker versioning
 
-## Dynamodb table for locking
+### Dynamodb table for locking
     - Create Dynamo DB talbe
     - Partin key must be **LockID**
 
-## IAM
+### IAM
 - AWS Identity provider OpenID
     - in IAM create Identity provider
     - Select openID Connect
@@ -41,7 +41,7 @@ Build Terraform workflow with Github action.
     - Set region : AWS_REGION
     - Ser AWS role github action will assume : AWS_ROLE
 
-# aws role template
+## aws role template
 
 
 ```json
