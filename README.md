@@ -2,13 +2,13 @@
 Build Terraform workflow with Github action.
 
 # Goals
-[] AWS Open ID connect for token
-[] Tf fmt and validate
-[] Tflint
-[] tfsec
-[] Protect main branch
-[] action on pull request only
-[] Require approval for merge
+- [X] AWS Open ID connect for token
+- [X] Tf fmt and validate
+- [X] Protect main branch
+- [X] action on pull request only
+- [X] Require approval for merge
+- [] Tflint
+- [] tfsec
 
 # Steps
 

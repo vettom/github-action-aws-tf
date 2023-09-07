@@ -5,7 +5,7 @@ terraform {
     region         = "eu-west-1"
     encrypt        = true
     dynamodb_table = "github-action-aws-tf"
-    profile        = "dvettom"
+    profile        = "default"
   }
   required_providers {
     aws = {
@@ -15,5 +15,5 @@ terraform {
   }
 }
 provider "aws" {
-  region  = "eu-west-1"
+  region = "eu-west-1"
 }
