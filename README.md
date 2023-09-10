@@ -1,14 +1,14 @@
-# github-action-aws-tf
-Build Terraform workflow with Github action.
+# Github-action AWS Terraform
+Build Terraform workflow with Github action and Atlantis
 
-# Goals
+# Stge 1 Goals
 - [X] AWS Open ID connect for token
+- [X] TF state in S3 bucket
+- [X] TF state lock with Dynamodb
 - [X] Tf fmt and validate
 - [X] Protect main branch
 - [X] action on pull request only
 - [X] Require approval for merge
-- [] Tflint
-- [] tfsec
 
 # Steps
 
@@ -88,5 +88,5 @@ Build Terraform workflow with Github action.
 ```
 
 # Ref 
-- https://cloudscalr.com/
-- https://www.youtube.com/watch?v=GowFk_5Rx_I
+[https://cloudscalr.com/](https://cloudscalr.com/)
+[https://www.youtube.com/watch?v=GowFk_5Rx_I](https://www.youtube.com/watch?v=GowFk_5Rx_I)
