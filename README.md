@@ -37,10 +37,10 @@ Build Terraform workflow with Github action.
         - Any other necessary resource permission like EC2, EKS etc.
 
     - Github
+        - Set region : AWS_REGION
+        - Set AWS role github action will assume : AWS_ROLE
         - Create secret : AWS_BUCKET_NAME
         - Set tfstate file name AWS_BUCKER_KEY_NAME
-        - Set region : AWS_REGION
-        - Ser AWS role github action will assume : AWS_ROLE
 
 ## aws role template
 
