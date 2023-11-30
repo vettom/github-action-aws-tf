@@ -38,9 +38,9 @@ Build Terraform workflow with Github action.
 
     - Github
         - Set region : AWS_REGION
-        - Set AWS role github action will assume : AWS_ROLE
+        - Set AWS role github action will assume (ARN): AWS_ROLE
         - Create secret : AWS_BUCKET_NAME
-        - Set tfstate file name AWS_BUCKER_KEY_NAME
+        - Set tfstate file name AWS_BUCKET_KEY_NAME
 
 ## aws role template
 
